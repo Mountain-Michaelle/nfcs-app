@@ -1,0 +1,192 @@
+
+.navbar{
+    height: 100px;
+    background-color: #342f39;
+    color: white;
+    display: flex;
+    
+
+    .nav-left{
+        flex: 1.5;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+
+        .circle{
+            width: 65px;
+            height: 65px;
+            background: #d7fffe;
+            margin: 10px;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 1px 2px 20px #cefdff;
+            transform: scaleY(1);
+            transition: 0.5s ease-in-out;
+            
+        .nm{
+            position: absolute;
+            top: 20%;
+            right: -10%;
+            color: d4e6f8;
+            text-shadow: -3px 0px 1px darkblue;
+        }
+
+
+            
+        }
+
+        .name{
+            font-size: 0.8rem;
+            color: #5e8187;
+            font-weight: 600;
+            padding-left: 0.5rem;
+        }  
+        
+        .menu{
+            display: none;
+            
+           
+        }
+
+        .mode{
+            position: absolute;
+            right: 0;
+            top: 35%;
+            
+            button{
+                border: none;
+                outline: none;
+                background: none;
+                padding: 7px;
+                border-radius: 50%;
+
+                .MuiSvgIcon-root{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+    }
+
+
+    .nav-right{
+        flex:3.5;
+        align-items: center;
+        display: flex;
+        padding-right: 1rem;
+
+        a{
+            margin-left: 10%;
+            font-weight: 550;
+            color:#7d8f8f; 
+        }
+    }
+
+    .inactive, .drop-down{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .navbar{
+        flex-direction: column;
+        height: 125px;
+
+        .nav-left{
+            flex: 1;
+            transition: ease 0.5s;
+        }
+
+
+        .nav-right{
+            flex: 1;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            transition: 0.5s all;
+
+
+            a{
+               margin: 0;
+
+            }
+        }
+
+        .nav-left{
+
+            .mode{
+                right: 20%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+    .navbar{
+        padding-right: auto;
+        padding-left: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: initial;
+        
+        .nav-left{
+
+            .name{
+                display: none;
+            }
+
+            .menu{
+                display: flex;
+                position: absolute;
+                right: 2%;
+
+                .icon-border{
+                    border: 1px solid #624569;
+                    padding: 0.3rem;
+                    transition: opacity 0.5s ease-in;
+
+                    .MuiSvgIcon-root{
+                        font-size: 1.7rem;
+                    }
+                }
+
+            }
+
+            .mode{
+                right: 60%;
+            }
+        }
+
+
+        .nav-right{
+            position: relative;
+
+            a{
+                display: none;
+            }
+
+
+        }
+
+        .drop-down{
+            display: flex;
+            flex-direction: column;
+            background: #1a161c;
+            padding: 1rem 0rem 1rem 1rem;
+            transition: opacity 0.5s ease, transform 0.3s ease;
+            translate: transformY(-20px);
+            visibility: visible;
+        }
+
+        .inactive{
+            a{
+                display: none ;
+            }
+        }
+
+    }
+}

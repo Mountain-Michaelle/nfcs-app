@@ -6,6 +6,61 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --nfcs-card-shadow: 0px 0px 6px 0px #d9d9d9;
+  --nfcs-card-bg: white;;
+  --nfcs-h: black;
+
+  /** Home page design */
+  
+  --nfcs-slider-bg: #fff8e7;;
+  --nfcs-slider-box-sd: 1px 3px 6px 0px #ecd49e;
+  --nfcs-feat-btn: rgb(173 34 34 / 33%) !important;
+  --nfcs-txt-bg: #751d1d85;
+  --nfcs-card-box-shadow:-3px -1px 7px 0px #ee82e373;
+  --nfcs-cover-bg: #b5a6a62b;
+  --nfcs-footer-bg: #200c16;
+
+
+  --nfcs-bg: white;
+  --nfcs-h2: #c0f6ff;
+  --nfcs-pg: #fff9f1;
+  --nfcs-txt: black;
+  --nfcs-primary: blue;
+  --nfcs-secondary: purple;
+  --nfcs-error: red;
+  --nfcs-warning: orange;
+  --nfcs-cover-banner: rgb(26 24 24 / 0%);
+}
+
+.dark-theme{
+  --nfcs-bg: #060006;
+  --nfcs-h2: #c0f6ff;
+  --nfcs-pg: #d5bf95;
+  --nfcs-txt: white;
+  --nfcs-cover-banner: rgba(0, 0, 0, 0.6588235294);
+  --nfcs-box-shadow: 2px 3px 20px #c0f6ff;
+  --nfcs-txt-bg: none;
+  --nfcs-cover-bg: #100b0b1f;
+  --nfcs-footer-bg: #09000d;
+  --nfcs-h: white;
+
+
+
+  /** Home page design */
+  --nfcs-slider-bg: black;
+  --nfcs-feat-btn: rgba(171, 138, 84, 0.09) !important;
+  --nfcs-slider-box-sd: -3px 0px 20px 2px #2a010059;
+  --nfcs-card-box-shadow:4px -2px 19px 9px #00274324;
+  --nfcs-card-shadow: -1px -2px 8px 0px #321515;
+  --nfcs-card-bg: #090009;
+}
+
+
+.light-theme{
+  --nfcs-bg: white;
+  --nfcs-h2: #1a0e01;
+  --nfcs-p: #c0f6ff;
+  --nfcs-box-shadow: 2px 3px 20px #c0f6ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,10 +68,13 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    
   }
 }
 
 body {
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +82,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+    width:  100%;
+    padding-left: auto;
+    padding-right: auto;
+    max-width: 1800px;
+    margin: 0 auto;
+    transition: all 0.2s;
 }
 
 @layer utilities {

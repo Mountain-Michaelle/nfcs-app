@@ -1,0 +1,128 @@
+@import '../scss/Responsive.scss';
+
+
+.blog{
+    background: var(--nfcs-bg);
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    overflow: scroll;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include medium{
+        flex-direction: column;
+    }
+    .side-bar{
+        flex: 1.5;
+        background: #342f39;
+    }
+
+    .blog-bar{
+        flex: 3.5;
+        padding: 10px 15px;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        
+
+        .blog-cards{
+            height: 300px;
+            width: 80%;
+            max-width: 700px;
+            max-height: 400px;
+            background: var(--nfcs-card-bg);
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: var(--nfcs-card-shadow);
+            position: relative;
+            overflow: hidden;
+
+          
+            
+            .img-cd{
+                flex: 2;
+                width: 100%;
+                height: 180px;
+                overflow: hidden;
+                margin: 1rem;
+                border-radius: 5px;
+               
+
+               
+               img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            }
+        .img-cv{
+                background: rgba(0, 0, 0, 0);
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 999;
+            }
+            .content{
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+
+                h3{
+                    text-align: center;
+                    color: var(--nfcs-h);
+                    text-transform: uppercase;
+                    background: #ffd533c9;
+                    padding: 5px;
+                }
+
+                p{
+                    color: var(--nfcs-h2);
+                    text-align: center;
+                    font-size: 0.9rem;
+                    font-weight: 420;
+                }
+            }
+            
+            a{
+                background: #ffd533c9;
+                color: red;
+                width: fit-content;
+                padding: 7px;
+                height: fit-content;
+                text-decoration: none;
+                position: absolute;
+                bottom: 5%;
+                right: 5%;
+                z-index: 10000;
+            }
+            
+            @include small{
+                flex-direction: column;
+                width: 100%;
+
+                .img-cd{
+                    flex: 2;
+                    justify-content: center;
+                    margin: 0 auto;
+                    height: 100%;
+                    box-shadow: none;
+
+                    img{
+                        height: 100%;
+                    }
+                }
+
+                .content{
+                    flex: 3;
+                }
+            }
+        }
+    }
+}  

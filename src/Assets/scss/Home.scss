@@ -1,0 +1,22 @@
+.home{
+    width: 100%;
+
+    background-color: var(--nfcs-bg);
+    color: #ffffff;
+
+    .recommend{
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.3rem;
+        color: var(--nfcs-h2);
+    }
+}
+
+@media screen and (max-width: 300px){
+    .home{
+        .recommend{
+            font-size: 1.05rem;
+        }
+    }
+}

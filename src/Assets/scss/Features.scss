@@ -1,0 +1,93 @@
+
+
+.features{
+    background-color: #210b0bba;
+    height: 350px;
+    display: flex;
+    position: relative;
+
+
+    .f-left{
+        flex: 1;
+        height: 100%;
+        overflow: hidden;
+        .card{
+            height: 100%;
+            width: 100%;
+
+            img{
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+            }
+
+            .desc{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #0000007d;
+                right: 0;
+                left: 0;
+                top: 0;
+                color: white;
+
+                h1{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #ffa603;
+                    padding: 5px;
+                    font-weight: 400;
+                    border-radius: 0 0 20px 0;
+                }
+
+                .blog-feature{
+                    margin-top: 3rem;
+                    margin-left: 20px;
+                    
+                    h2{
+                        font-size: 1.3rem;
+                        color: #ff9800;
+                    }
+
+                    p{
+                        font-size: 0.7rem;
+                        width: 60%;
+                        margin-top: 0.8rem;
+                        margin-left: 0.3rem;
+                        color: var(--nfcs-pg) !important;
+
+                    }
+                }
+
+
+            }
+
+            .feat-blog{
+                position: absolute;
+                z-index: 99999;
+                padding: 5px;
+                top: 0;
+                left: 0;
+                background: var(--nfcs-feat-btn);
+                color: #fbb91f;
+                }
+
+            .swiper-container{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: relative;
+
+                .cover-banner{
+                    position: absolute;
+                    background: black;
+                    color: white;
+                    z-index: 100;
+                }
+
+            }
+        }
+    }
+
+}
